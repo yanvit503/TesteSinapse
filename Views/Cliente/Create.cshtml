@@ -1,0 +1,33 @@
+@model TesteSinapse.Models.Cliente
+
+@if(ViewBag.Erro != null)
+{
+    <div class="alert alert-danger">@ViewBag.Erro</div>
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" method="POST">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label class="control-label">Nome</label>
+                <input asp-for="Nome" class="form-control" required/>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Telefone</label>
+                <input asp-for="Telefone" class ="form-control" required></select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Tipo</label>
+                <select asp-for="Tipo_Cliente" class="form-control" required>
+                    <option value="f" selected>Pessoa física</option>
+                    <option value="j">Pessoa jurídica</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Criar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>

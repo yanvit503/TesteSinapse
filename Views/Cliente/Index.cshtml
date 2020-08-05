@@ -1,0 +1,64 @@
+@model IEnumerable<TesteSinapse.Models.Cliente>
+
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<p>
+    <a class="btn btn-success" asp-action="Create">Novo</a>
+</p>
+<table class="table table-responsive-md">
+    <thead>
+        <tr>
+            <th>
+                Código
+            </th>
+            <th>
+               Nome
+            </th>
+            <th>
+                Telefone
+            </th>
+            <th>
+                Cadastro
+            </th>
+            <th>
+                Tipo
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var cliente in Model)
+    {
+        <tr>
+            <td>
+                @cliente.Cod_Cliente
+            </td>
+            <td>
+                @cliente.Nome
+            </td>
+            <td>
+                @cliente.Telefone
+            </td>
+            <td>
+                @cliente.Data_Cadastro.ToString()
+            </td>
+            <td>
+                @if(cliente.Tipo_Cliente.Equals('j'))
+                {
+                    @:Pessoa jurídica
+                }
+                else
+                {
+                    @:Pessoa física
+                }
+            </td>
+            <td>
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@cliente.Cod_Cliente">Alterar</a>                
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@cliente.Cod_Cliente">Apagar</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
