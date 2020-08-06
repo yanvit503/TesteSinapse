@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\YaN\\source\\repos\\TesteSinapse\\TesteSinapse.csproj": {}
+    "C:\\Users\\Carlos\\source\\repos\\TesteSinapse\\TesteSinapse.csproj": {}
   },
   "projects": {
-    "C:\\Users\\YaN\\source\\repos\\TesteSinapse\\TesteSinapse.csproj": {
+    "C:\\Users\\Carlos\\source\\repos\\TesteSinapse\\TesteSinapse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\YaN\\source\\repos\\TesteSinapse\\TesteSinapse.csproj",
+        "projectUniqueName": "C:\\Users\\Carlos\\source\\repos\\TesteSinapse\\TesteSinapse.csproj",
         "projectName": "TesteSinapse",
-        "projectPath": "C:\\Users\\YaN\\source\\repos\\TesteSinapse\\TesteSinapse.csproj",
-        "packagesPath": "C:\\Users\\YaN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\YaN\\source\\repos\\TesteSinapse\\obj\\",
+        "projectPath": "C:\\Users\\Carlos\\source\\repos\\TesteSinapse\\TesteSinapse.csproj",
+        "packagesPath": "C:\\Users\\Carlos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Carlos\\source\\repos\\TesteSinapse\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\YaN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Carlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

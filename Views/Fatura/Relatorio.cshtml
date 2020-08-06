@@ -1,0 +1,54 @@
+@model IEnumerable<TesteSinapse.Models.Fatura>
+
+
+<div class="row">
+    <div class="col-sm-3">
+        <a class="btn btn-info" asp-action="Index">Voltar</a>
+    </div>
+</div>
+<br>
+
+<table class="table table-responsive-md">
+    <thead>
+        <tr>
+            <th>
+                Código
+            </th>
+            <th>
+                Cliente
+            </th>
+            <th>
+                Data de emissão
+            </th>
+            <th>
+                Data de vencimento
+            </th>
+            <th>
+                Valor
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fatura in Model)
+        {
+            <tr>
+                <td>
+                    @fatura.Num_Fatura
+                </td>
+                <td>
+                    @fatura.Cliente.Nome
+                </td>
+                <td>
+                    @fatura.Data_Emissao
+                </td>
+                <td>
+                    @fatura.Data_Vencimento
+                </td>
+                <td>
+                    R$@fatura.Valor.ToString()
+                </td>
+            </tr>
+        }
+    </tbody>
+    <p style="font-weight: bold;">Total : R$@ViewBag.Total</p>
+</table>

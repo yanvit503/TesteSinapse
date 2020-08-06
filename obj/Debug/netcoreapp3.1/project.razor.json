@@ -20531,8 +20531,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Carlos\\source\\repos\\TesteSinapse\\Views\\Fatura\\Index.cshtml",
+      "TargetPath": "Views\\Fatura\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Carlos\\source\\repos\\TesteSinapse\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Carlos\\source\\repos\\TesteSinapse\\Views\\Fatura\\Edit.cshtml",
+      "TargetPath": "Views\\Fatura\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -20546,6 +20556,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Carlos\\source\\repos\\TesteSinapse\\Views\\Fatura\\Relatorio.cshtml",
+      "TargetPath": "Views\\Fatura\\Relatorio.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Carlos\\source\\repos\\TesteSinapse\\Views\\Cliente\\Delete.cshtml",
       "TargetPath": "Views\\Cliente\\Delete.cshtml",
       "FileKind": "mvc"
@@ -20553,6 +20568,16 @@
     {
       "FilePath": "c:\\Users\\Carlos\\source\\repos\\TesteSinapse\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Carlos\\source\\repos\\TesteSinapse\\Views\\Fatura\\Delete.cshtml",
+      "TargetPath": "Views\\Fatura\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Carlos\\source\\repos\\TesteSinapse\\Views\\Fatura\\Create.cshtml",
+      "TargetPath": "Views\\Fatura\\Create.cshtml",
       "FileKind": "mvc"
     },
     {

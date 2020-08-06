@@ -18,6 +18,10 @@
             </div>
         </form>
     </div>
+
+    <div class="col-3">
+        <button class="btn btn-info" onclick="modalRelatorio()">Relatório</button>
+    </div>
 </div>
 
 <table class="table table-responsive-md">
@@ -68,3 +72,26 @@
         }
     </tbody>
 </table>
+
+@section Scripts
+{
+    <script>
+
+        function modalRelatorio() 
+        {
+
+            Swal.fire({
+                title: 'Relatório faturas emitidas',
+                html:
+                    '<form method="POST" action="/fatura/relatorio">' +
+                    '<label>Data inicial</label>' +
+                    '<input required type="date" class="swal2-input" name="data1">' +
+                    '<label>Data final</label>' +
+                    '<input required type="date" class="swal2-input" name="data2">' +
+                    '<input type="submit" value="Visualizar" class="btn btn-info">' +
+                    '</form>',
+                showConfirmButton:false,
+            })
+        }
+    </script>
+}

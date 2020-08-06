@@ -752,3 +752,8 @@ C:\Users\YaN\source\repos\TesteSinapse\obj\Debug\netcoreapp3.1\Razor\Views\Fatur
 C:\Users\YaN\source\repos\TesteSinapse\obj\Debug\netcoreapp3.1\Razor\Views\Fatura\Index.cshtml.g.cs
 C:\Users\YaN\source\repos\TesteSinapse\obj\Debug\netcoreapp3.1\Razor\Views\Fatura\Edit.cshtml.g.cs
 C:\Users\YaN\source\repos\TesteSinapse\obj\Debug\netcoreapp3.1\Razor\Views\Fatura\Delete.cshtml.g.cs
+C:\Users\Carlos\source\repos\TesteSinapse\obj\Debug\netcoreapp3.1\Razor\Views\Fatura\Create.cshtml.g.cs
+C:\Users\Carlos\source\repos\TesteSinapse\obj\Debug\netcoreapp3.1\Razor\Views\Fatura\Delete.cshtml.g.cs
+C:\Users\Carlos\source\repos\TesteSinapse\obj\Debug\netcoreapp3.1\Razor\Views\Fatura\Edit.cshtml.g.cs
+C:\Users\Carlos\source\repos\TesteSinapse\obj\Debug\netcoreapp3.1\Razor\Views\Fatura\Index.cshtml.g.cs
+C:\Users\Carlos\source\repos\TesteSinapse\obj\Debug\netcoreapp3.1\Razor\Views\Fatura\Relatorio.cshtml.g.cs

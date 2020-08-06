@@ -26,6 +26,30 @@ namespace TesteSinapse.Controllers
             return View(result);
         }
 
+
+
+        [HttpPost]
+        public async Task<IActionResult> Relatorio(DateTime data1,DateTime data2)
+        {
+            var result = await _context.Faturas.Include(x => x.Cliente).Where(x=> x.Data_Emissao >= data1 && x.Data_Vencimento <= data2)
+                                .OrderBy(x => x.Cliente.Nome)
+                                .OrderBy(x => x.Data_Emissao)
+                                .ToListAsync();
+
+            float total = 0;
+            
+             result.ForEach(x => {
+
+                total += x.Valor;
+
+            });
+
+            ViewBag.Total = total;
+
+            return View(result);
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> Index(int codigo)
         {
