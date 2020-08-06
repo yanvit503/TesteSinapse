@@ -25,6 +25,14 @@ namespace TesteSinapse.Controllers
             return View(result);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Index(string nome)
+        {
+            var result = await _context.Clientes.Where(x => x.Visivel && x.Nome.Contains(nome)).ToListAsync();
+
+            return View(result);
+        }
+
         public IActionResult Create()
         {
             return View();
@@ -33,7 +41,12 @@ namespace TesteSinapse.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Cliente cliente)
         {
-            cliente.Data_Cadastro = DateTime.Now;
+            if(cliente.Data_Cadastro > DateTime.Now)
+            {
+                ViewBag.Erro = "Data de cadastro não pode ser maior que a data atual.";
+                return View(cliente);
+            }
+
             cliente.Visivel = true;
 
             await _context.AddAsync(cliente);
@@ -64,9 +77,14 @@ namespace TesteSinapse.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(Cliente cliente)
         {
+            if (cliente.Data_Cadastro > DateTime.Now)
+            {
+                ViewBag.Erro = "Data de cadastro não pode ser maior que a data atual.";
+                return View(cliente);
+            }
+
             cliente.Visivel = true;
             _context.Clientes.Update(cliente);
-            _context.Entry(cliente).State = EntityState.Modified;
             int result = await _context.SaveChangesAsync();
 
             if(result > 0)//caso tudo OK
@@ -75,7 +93,7 @@ namespace TesteSinapse.Controllers
             }
 
             ViewBag.Erro = "Ocorreu um erro !";
-            return View();
+            return View(cliente);
         }
 
          public async Task<IActionResult> Delete(int? id)
@@ -96,7 +114,6 @@ namespace TesteSinapse.Controllers
         {
             cliente.Visivel = false;
             _context.Clientes.Update(cliente);
-            _context.Entry(cliente).State = EntityState.Modified;
             int result = await _context.SaveChangesAsync();
 
             if(result > 0)//caso tudo OK
@@ -105,7 +122,7 @@ namespace TesteSinapse.Controllers
             }
 
             ViewBag.Erro = "Ocorreu um erro !";
-            return View();
+            return View(cliente);
         }
         
     }

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<TesteSinapse.Models.Fatura>
+
+
+<div class="row">
+    <div class="col-sm-3">
+        <p>
+            <a class="btn btn-success" asp-action="Create">Novo</a>
+        </p>
+    </div>
+
+    <div class="col-md-3">
+        <form asp-action="Index" method="post">
+            <div class="input-group">
+                <input name="codigo" type="number" class="form-control" placeholder="Código" required />
+                <div class="input-group-append">
+                    <input type="submit" value="Encontrar" class="btn btn-info" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<table class="table table-responsive-md">
+    <thead>
+        <tr>
+            <th>
+                Código
+            </th>
+            <th>
+                Cliente
+            </th>
+            <th>
+                Data de emissão
+            </th>
+            <th>
+                Data de vencimento
+            </th>
+            <th>
+                Valor
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var fatura in Model)
+        {
+            <tr>
+                <td>
+                    @fatura.Num_Fatura
+                </td>
+                <td>
+                    @fatura.Cliente.Nome
+                </td>
+                <td>
+                    @fatura.Data_Emissao
+                </td>
+                <td>
+                    @fatura.Data_Vencimento
+                </td>
+                <td>
+                    R$@fatura.Valor.ToString()
+                </td>
+                <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@fatura.Num_Fatura">Alterar</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@fatura.Num_Fatura">Apagar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -14,6 +14,6 @@ namespace TesteSinapse.Models
         public float Valor { get; set; }
 
         [ForeignKey(nameof(Cod_Cliente))]
-        Cliente Cliente {get;set;}
+        public Cliente Cliente {get;set;}
     }
 }

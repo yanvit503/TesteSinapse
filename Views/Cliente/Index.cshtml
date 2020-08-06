@@ -4,9 +4,25 @@
     ViewData["Title"] = "Clientes";
 }
 
-<p>
-    <a class="btn btn-success" asp-action="Create">Novo</a>
-</p>
+<div class="row">
+    <div class="col-sm-3">
+        <p>
+            <a class="btn btn-success" asp-action="Create">Novo</a>
+        </p>
+    </div>
+
+    <div class="col-md-3">
+        <form asp-action="Index" method="post">
+            <div class="input-group">
+                <input name="nome" class="form-control" placeholder="Nome" required />
+                <div class="input-group-append">
+                    <input type="submit" value="Encontrar" class="btn btn-info" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
 <table class="table table-responsive-md">
     <thead>
         <tr>
@@ -14,7 +30,7 @@
                 Código
             </th>
             <th>
-               Nome
+                Nome
             </th>
             <th>
                 Telefone
@@ -29,36 +45,36 @@
         </tr>
     </thead>
     <tbody>
-    @foreach (var cliente in Model)
-    {
-        <tr>
-            <td>
-                @cliente.Cod_Cliente
-            </td>
-            <td>
-                @cliente.Nome
-            </td>
-            <td>
-                @cliente.Telefone
-            </td>
-            <td>
-                @cliente.Data_Cadastro.ToString()
-            </td>
-            <td>
-                @if(cliente.Tipo_Cliente.Equals('j'))
-                {
-                    @:Pessoa jurídica
-                }
-                else
-                {
-                    @:Pessoa física
-                }
-            </td>
-            <td>
-                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@cliente.Cod_Cliente">Alterar</a>                
-                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@cliente.Cod_Cliente">Apagar</a>
-            </td>
-        </tr>
-    }
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>
+                    @cliente.Cod_Cliente
+                </td>
+                <td>
+                    @cliente.Nome
+                </td>
+                <td>
+                    @cliente.Telefone
+                </td>
+                <td>
+                    @cliente.Data_Cadastro.ToString()
+                </td>
+                <td>
+                    @if (cliente.Tipo_Cliente.Equals('j'))
+                    {
+                        @:Pessoa jurídica
+                    }
+                    else
+                    {
+                        @:Pessoa física
+                    }
+                </td>
+                <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@cliente.Cod_Cliente">Alterar</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@cliente.Cod_Cliente">Apagar</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
